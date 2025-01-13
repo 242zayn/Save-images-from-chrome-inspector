@@ -1,17 +1,36 @@
-/* open up chrome dev tools (Menu > More tools > Developer tools)
- * go to network tab, refresh the page, wait for images to load (on some sites you may have to scroll down to the images for them to start loading)
- * right click/ctrl click on any entry in the network log, select Copy > Copy All as HAR
- * open up JS console and enter: var har = [paste]
- * (pasting could take a while if there's a lot of requests)
- * paste the following JS code into the console
- * copy the output, paste into a text file
- * open up a terminal in same directory as text file, then: wget -i [that file]
- */
+# Global State Management with Jutai and Next.js
 
-var imageUrls = [];
-har.log.entries.forEach(function (entry) {
-  // This step will filter out all URLs except images. If you just want e.g. just jpg's then check mimeType against "image/jpeg", etc.
-  if (entry.response.content.mimeType.indexOf("image/") !== 0) return;
-  imageUrls.push(entry.request.url);
-});
-console.log(imageUrls.join("\n"));
+Welcome to the **Global State Management with Jutai and Next.js** project! This project demonstrates how to use the Jutai global state management tool to efficiently manage application state in a Next.js environment.
+
+## 🚀 Features
+
+- **Jutai Integration**: Simplified and efficient global state management.
+- **Next.js Framework**: Fast and SEO-friendly React framework.
+- **Scalable Architecture**: Easily extendable for larger projects.
+- **Responsive Design**: Built with mobile-first principles.
+- **Code Splitting**: Enhanced performance using Next.js dynamic imports.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js (React.js Framework)
+- **State Management**: Jutai
+- **Styling**: Tailwind CSS (or other CSS frameworks, if applicable)
+- **Backend**: (If any backend services are used, mention here)
+- **Cloud Services**: (E.g., Cloudinary, AWS, etc., if applicable)
+
+## 🧩 Getting Started
+
+Follow these steps to set up the project locally:
+
+### Prerequisites
+
+- Node.js v16 or later
+- npm or yarn installed
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
